@@ -17,6 +17,7 @@ Tested on Patchbox OS
 
 ### Requirements
 
+- SH1106 display
 - Python3
 - Audacity minimum version 2.4.2 (requires mod-script-pipe, for scripting audacity)
 - pip3
@@ -29,8 +30,9 @@ https://github.com/audacity/audacity/blob/master/BUILDING.md
 
 To start audacity in headless mode, run 
 
-`export DISPLAY=:0`
-`./path/to/audacity`
+```export DISPLAY=:0```
+
+```./path/to/audacity```
 
 Then, run the interactive python script which will drive the display and start/stop recording in audacity on button presses.
 
@@ -41,6 +43,7 @@ Then, run the interactive python script which will drive the display and start/s
 To start audacity and the script on reboot, we can configure an autostart with systemd:
 
 `systemctl start pyrecord.service`
+
 `systemctl enable pyrecord.service`
 
 To check status:
