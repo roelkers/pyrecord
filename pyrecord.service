@@ -1,0 +1,11 @@
+[Unit]
+Description=Service that will record using audacity pipes
+
+[Service]
+Type=simple
+User=patch
+ExecStart=/bin/bash /home/patch/Workspace/Tests/record_audacity.sh
+TimeoutStartSec=40
+
+[Install]
+WantedBy=graphical.target
